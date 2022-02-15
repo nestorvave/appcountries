@@ -1,0 +1,38 @@
+.card {
+    width: 230px;
+    border-radius: 3px;
+    margin: 10px;
+    height: 250px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
+    margin-top: 50px;
+
+    &:hover{
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
+
+    .img{
+        background: red;
+        height: 50%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .information_Card{
+
+       height: 46%;
+       padding-left: 10px;
+       font-size: 13px;
+       
+       h3{
+           margin:  10px 0;
+       }
+       p{
+           margin-top: 7px;
+           
+       }
+
+    }
+
+
+}
+
