@@ -2,10 +2,18 @@ import React from 'react'
 
 export const CardSelected = ({
     img="",
-    countryName=""
+    countryName="",
+    nativeName="",
+    population="",
+    region="",
+    subRegion="",
+    capital="",
+    currencies="",
+    languages="",
+    tld=""
 
 }) => {
-    console.log(img)
+    console.log(languages)
   return (
     <section>
         <h1>Card</h1>
@@ -16,19 +24,19 @@ export const CardSelected = ({
             <h1> { countryName } </h1>
         </div>
         <div>
-            <p> <bold>Native Name:</bold>  </p>
-            <p><bold>Population:</bold></p>
-            <p><bold>Region:</bold> </p>
-            <p><bold>Sub Region:</bold> </p>
-            <p><bold>Capital:</bold> </p>
+            <p> <b>Native Name:</b> {nativeName}  </p>
+            <p><b>Population:</b> {population} </p>
+            <p><b>Region:</b> {region}  </p>
+            <p><b>Sub Region:</b> {subRegion}  </p>
+            <p><b>Capital:</b> {capital} </p>
         </div>
         <div>
-            <p><bold>Top Level Domain:</bold></p>
-            <p><bold>Currencies:</bold> </p>
-            <p><bold>Languages: </bold> </p>
+            <p><b>Top Level Domain:</b> {tld[0]}</p>
+            <p><b>Currencies:</b> {currencies.name} </p>
+            <p><b>Languages:</b>  </p>
         </div>
         <div>
-            <p><bold>Border Countries: </bold> </p>
+            <p><b>Border Countries: </b> </p>
       
         </div>
 

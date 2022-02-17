@@ -10,6 +10,7 @@ export const useFetch = () => {
     async function fetchingApi (){
       let response = await fetch(url);
       response = await response.json();
+      console.log(response)
       setData(response.map((item)=>{
         const{
               flags,region,

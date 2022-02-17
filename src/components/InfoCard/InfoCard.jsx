@@ -24,7 +24,14 @@ export const InfoCard = () => {
               key={item.name.common}
               img={item.flags.png}
               countryName={item.name.common}
-            
+              // nativeName={item.name.nativeName.zho.common}
+              population={item.population}
+              region={item.region}
+              subRegion={item.subregion}
+              capital={item.capital}
+              currencies={item.currencies}
+              languages={item.languages}
+              tld={item.tld}
             />
             
               
