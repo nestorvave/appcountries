@@ -36,8 +36,8 @@ export const CardSelected = ({
             <p><b>Languages:</b>  </p>
         </div>
         <div>
-            <p><b>Border Countries: </b> </p>
-      
+            <p><b>Border  Countries: </b> </p>
+            <p>Pobrando </p>
         </div>
 
     </section>
