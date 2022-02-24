@@ -1,0 +1,44 @@
+section {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    p{
+        margin: 5px 0;
+    }
+    .img-country{
+        width: 100%;
+        margin-bottom: 30px;
+        img{
+            width: 100%;
+        }
+    }
+    .country-container{
+        width: 100%;
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .country-name{
+            h2{
+                font-size: 20px;
+            }
+        }
+        .border{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button{
+                margin: 4px;
+                width: auto;
+                height: 30px;
+                padding: 10px;
+                font-size: 10px;
+            }
+            button:hover{
+                box-shadow: 1px 1px 1px #eee;
+            }
+        }
+    
+    }
+}

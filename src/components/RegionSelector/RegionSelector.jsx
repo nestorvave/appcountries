@@ -4,7 +4,7 @@ import './regionSelector.scss'
 
 export const RegionSelector = () => {
 
-    const{setRegion}=useContext( DataContext )
+    const{isDark,setIsDark,setRegion}=useContext( DataContext )
 
     function handleSelector({target}) {
         setRegion(target.value)
@@ -14,7 +14,7 @@ export const RegionSelector = () => {
  
 
     return (
-        <select className='selector selector_Dark' onChange={handleSelector}>
+        <select className={`selector ${isDark && "selector_Dark"}`} onChange={handleSelector}>
             <option value="all">Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>

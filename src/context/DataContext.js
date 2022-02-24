@@ -6,6 +6,7 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [region, setRegion] = useState("all");
   const [country, setCountry] = useState("");
+  const [isDark, setIsDark]=useState(false)
 
   return (
     <DataContext.Provider
@@ -13,7 +14,9 @@ export const DataProvider = ({ children }) => {
         region,
         setRegion,
         country, 
-        setCountry
+        setCountry,
+        isDark, 
+        setIsDark
       }}
     >
       {children}

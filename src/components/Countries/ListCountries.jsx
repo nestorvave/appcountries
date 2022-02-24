@@ -13,7 +13,7 @@ import "./listCountries.scss";
 export const ListCountries = () => {
   
   let [data]=useFetch()
-  const {region,country}=useContext( DataContext )
+  const {isDark,setIsDark,region,country}=useContext( DataContext )
   data=filterByRegion(data,region)
   data=filterByCountry(data,country)
 
@@ -21,7 +21,7 @@ export const ListCountries = () => {
 
 
   return (
-    <main className="container dark_Container">
+    <main className={`container ${isDark && "dark_Container"} `}>
       <section className="container_MainScreen">
         <Searcher />
         <RegionSelector />

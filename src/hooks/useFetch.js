@@ -10,7 +10,6 @@ export const useFetch = () => {
     async function fetchingApi (){
       let response = await fetch(url);
       response = await response.json();
-      console.log(response)
       setData(response.map((item)=>{
         const{
               flags,region,
@@ -18,9 +17,9 @@ export const useFetch = () => {
               population,name,
               subregion,tld,
               currencies,languages
-              ,borders
+              ,borders,cca3
             } =item;
-        return {flags,region,area,capital,population,name,subregion,tld,currencies,borders,languages}
+        return {flags,region,area,capital,population,name,subregion,tld,currencies,borders,languages,cca3}
         })
       )
     }

@@ -16,8 +16,14 @@
         font-size: 18px;
         font-weight: bold;
     }
-    p{
-        font-size: 15px;
+    .btn-theme{
+        p{
+            font-size: 15px;
+        }
+    }
+    .btn-theme:hover{
+       
+        transform: scale(1.1);
     }
 }
 .dark_bar{

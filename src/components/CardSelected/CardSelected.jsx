@@ -1,4 +1,8 @@
 import React from 'react'
+import  {filterByBorder}  from '../../helpers/filterByBorder'
+import './CardSelected.scss'
+import {useNavigate} from 'react-router-dom'
+
 
 export const CardSelected = ({
     img="",
@@ -10,21 +14,41 @@ export const CardSelected = ({
     capital="",
     currencies="",
     languages="",
-    tld=""
+    tld="",
+    borders="",
+    cca3="",
+    data=[]
 
 }) => {
-    console.log(languages)
+    console.log(cca3)
+    const language = Object.values(languages)
+    const native = Object.values(nativeName)
+    const kindOfCurrencies = Object.values(currencies)
+    console.log(kindOfCurrencies[0].name)
+    const navigate= useNavigate()
+    
+    function handleBorder(border) {
+        console.log(border)
+        let country=filterByBorder(data,border)
+        console.log(country[0].name.common)
+        navigate(`/country/${country[0].name.common}`)
+
+        
+    }
+
+
+
   return (
     <section>
-        <h1>Card</h1>
-        <div>
+        <div className='img-country' >
          <img src={img} alt="" />
         </div>
-        <div>
-            <h1> { countryName } </h1>
+        <div className='country-container' >
+        <div className='country-name'>
+            <h2> { countryName } </h2>
         </div>
-        <div>
-            <p> <b>Native Name:</b> {nativeName}  </p>
+        <div  className='country-main'>
+            <p> <b>Native Name:</b> {native[0].common}  </p>
             <p><b>Population:</b> {population} </p>
             <p><b>Region:</b> {region}  </p>
             <p><b>Sub Region:</b> {subRegion}  </p>
@@ -32,12 +56,20 @@ export const CardSelected = ({
         </div>
         <div>
             <p><b>Top Level Domain:</b> {tld[0]}</p>
-            <p><b>Currencies:</b> {currencies.name} </p>
-            <p><b>Languages:</b>  </p>
+            <p><b>Currencies:</b> {kindOfCurrencies[0].name} </p>
+            <div><b>Languages:</b> {language.map(item => <span key={item}> {item} </span>)} </div>
         </div>
-        <div>
+        <div className='border' >
             <p><b>Border  Countries: </b> </p>
-            <p>Pobrando </p>
+            <div className="grid-borders">
+            {
+                borders.length &&  
+                    borders.map( item => (<button onClick={()=> handleBorder(item)} key={item} >{item}</button>))
+            }
+
+            </div>
+        </div>
+
         </div>
 
     </section>

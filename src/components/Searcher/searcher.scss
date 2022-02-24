@@ -1,5 +1,4 @@
 .searchInput {
-
     width: 100%;
     height: 40px;
     display: flex;
@@ -8,10 +7,15 @@
     border-radius: 5px;
     box-shadow: rgb(0 0 0 / 2%) 0px 0px 10px 0px;
 
-    .red {
-
-        width: 20%;
-        height: 100%;
+    .search-icon {
+        width: 10%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin: 3px 5px 0 0;
+        img{
+            width: 100%;
+        }
     }
 
     .input_MainScreen {

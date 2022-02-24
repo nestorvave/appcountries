@@ -6,7 +6,7 @@ import './searcher.scss'
 
 
 export const Searcher = () => {
-  const{country,setCountry}= useContext( DataContext )
+  const{isDark,setIsDark,country,setCountry}= useContext( DataContext )
 
   function handleInput({target}) {
     setCountry(target.value)
@@ -15,14 +15,15 @@ export const Searcher = () => {
 
 
   return (
-    <div className="searchInput dark_searchInput">
-      <div className="red"></div>
+    <div className={`searchInput ${isDark && "dark_searchInput"} `}>
+      <div className="search-icon">
+        <img src="/Images/search-icon.svg" alt="search-icon"  />
+      </div>
       <Input
         placeholder="Search for a country..."
-        className="input_MainScreen dark_input_MainScreen"
+        className={`input_MainScreen ${isDark && "dark_input_MainScreen"}`}
         onChange={handleInput}
         value={country}
-
       />
     </div>
   );
